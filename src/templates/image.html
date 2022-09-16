@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>HTML Forms</h2>
+<form action="/image">
+  <label for="upload_file">Image path:</label><br>
+  <input type="text" id="upload_file" name="upload_file" value=""><br>
+  <label for="upload_file">Compression raio:</label><br>
+  <input type="text" id="compression_ratio" name="comp_ratio" value=""><br>
+  <input type="submit" value="Upload">
+</form>
+
+<form action="/image">
+  <label for="download_file">Image path:</label><br>
+  <input type="text" id="download_file" name="download_file" value=""><br>
+  <input type="submit" value="Download">
+</form>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+<h2>Response : {{response }}</h2>
+
+<form action="/filenames">
+  <input type="submit" value="Show saved files">
+</form>
+
+</body>
+</html>

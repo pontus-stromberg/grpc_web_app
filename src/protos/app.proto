@@ -1,0 +1,32 @@
+// app.proto
+
+syntax = "proto3";
+package api;
+
+service Api{
+
+  rpc UploadImage (UploadRequest) returns (ImageResponse) {}
+  rpc DownloadImage (DownloadRequest) returns (ImageResponse) {}
+  rpc PrintSavedFiles (FilenameRequest) returns (stream FilenameResponse) {}
+}
+
+message UploadRequest {
+  string filename = 1;
+  float ratio = 2;
+}
+
+message DownloadRequest {
+  string filename = 1;
+}
+
+message ImageResponse {
+  string message = 1;
+}
+
+message FilenameRequest {
+  string message = 1;
+}
+
+message FilenameResponse {
+  string filename = 1;
+}

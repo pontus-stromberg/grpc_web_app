@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    mongo:
+        volumes:
+            - $PWD/mongo-data:/data/db
+        ports:
+            - '27017:27017'
+        container_name: db
+        image: mongo
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=1234

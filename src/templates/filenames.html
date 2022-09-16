@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<body>
+
+<p>Files saved in database:</p>
+<ul>
+    {% for name in filenames %}
+        <li>{{ name }}</li>
+    {% endfor %}
+</ul>
+
+<form action="/image">
+  <input type="submit" value="Handle images">
+</form>
+
+
+</body>

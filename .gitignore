@@ -1,0 +1,4 @@
+/mongo-data
+/.pytest_cache
+/.idea
+/src/.pytest_cache
